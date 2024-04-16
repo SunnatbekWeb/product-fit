@@ -2,32 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.swiper {
+    width: 100%;
+    height: 650px;
+    position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute !important;
+    top: 95% !important;
+}
+
+.swiper-button-next {
+    right: 5% !important;
+}
+
+.swiper-button-prev {
+    left: 5% !important;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 40px !important;
+    background: #1E959B !important;
+    width: 15px !important;
+    height: 15px !important;
 }
